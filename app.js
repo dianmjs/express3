@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  if (req.query.name === undefined) var message = "<h1>Hola desconocido !</h1>";
-  else var message = "<h1>Hola " + req.query.name + " !</h1>";
+  if (req.query.nombre === undefined)
+    var message = "<h1>Hola desconocido!</h1>";
+  else var message = "<h1>Hola " + req.query.nombre + " !</h1>";
   res.send(message);
 });
 
